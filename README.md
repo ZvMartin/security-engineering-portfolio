@@ -43,3 +43,12 @@ This repository houses sanitized technical architecture whitepapers, threat inte
 - **SIEM, Logs, EDR & Forensics:** Wazuh SIEM/XDR, Aurora Lite EDR (Sigma Rules), Linux (`auth.log`, `syslog`/journald) & Windows Event Log Analysis, SQL Querying & Log Correlation, Wireshark, `tshark`, `tcpdump`, Managed Switch Port Mirroring (SPAN)
 - **Network & Zero-Trust Engineering:** Tailscale (Declarative ACLs, Grants, Tags, Subnet Routers, Exit Nodes), WireGuard, OpenWrt, 10GbE Switching, VLANs/Subnets, UFW, GCP VPC Firewalls
 - **Systems & Automation:** Linux (Debian/Ubuntu) & Windows Administration, OpenSSH Post-Quantum Hardening (`mlkem768x25519-sha256` & `sntrup761x25519-sha512`), Docker & Docker Compose, Python Scripting, `ttyd` Ephemeral Terminals, `ffmpeg` Media Transcoding Automation
+
+---
+
+## Certifications & Technical Training
+* **ISC2 Certified in Cybersecurity (CC)** — [Verify via Credly](https://www.credly.com/users/zvmartin) | Member ID `#3280732` *(Active through November 2029)*
+* **Google Cybersecurity Professional Certificate** — Coursera *(In Progress — Linux, SQL, Network Security & Risk Management)*
+* **Advanced Medical First Responder Level 1 (AMFR I)** — St. John Ambulance *(2026)*
+* **Standard First Aid, CPR-BLS (Level C) & AED** — *(Valid through July 2027)*
+* **Ontario Security Guard License** — Ministry of the Solicitor General *(Active)*
