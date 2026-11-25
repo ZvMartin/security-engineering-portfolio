@@ -1,7 +1,7 @@
 # Zachary V. Martin, CC — Security & Network Engineering Portfolio
 
 **ISC2 Certified in Cybersecurity (CC) [`#3280732`](https://www.credly.com/users/zvmartin)** | Industrial Infrastructure Protection | Defensive Network Architecture, Zero-Trust Overlay Networking, SIEM/XDR & Systems Administration
-**Location:** Leamington, ON | **Contact:** ridge.unity885@eagereverest.com
+  **Location:** Leamington, ON | **Contact:** ridge.unity885@eagereverest.com
 
 ---
 
