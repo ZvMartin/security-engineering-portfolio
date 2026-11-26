@@ -1,0 +1,56 @@
+# ==============================================================================
+# File: configs/ufw-rules-sanitized.txt
+# Author: Zachary V. Martin, CC
+# Description: Sanitized UFW Firewall & Forwarding Rule Baselines
+#
+# Sanitization Note: Public IPv4 addresses, Tailscale overlay IPs, local
+# usernames, hostnames, and physical interface names have been replaced with
+# RFC 5737 TEST-NET ranges and generic placeholders to preserve OPSEC.
+# ==============================================================================
+
+# ------------------------------------------------------------------------------
+# 1. On-Premises Media & Container Host (LAN + Tailscale Overlay + Forwarding)
+# ------------------------------------------------------------------------------
+[secadmin@lan-node-01:~$] sudo ufw status verbose
+Status: active
+Logging: on (low)
+Default: deny (incoming), allow (outgoing), deny (routed)
+New profiles: skip
+
+To                         Action      From
+--                         ------      ----
+Anywhere                   ALLOW IN    192.0.2.0/24
+Anywhere                   ALLOW IN    100.64.0.0/10
+41641/udp                  ALLOW IN    Anywhere
+1194/udp                   ALLOW IN    Anywhere
+443/tcp                    ALLOW IN    Anywhere
+22                         ALLOW IN    192.0.2.0/24
+Anywhere on lan-nic-1      ALLOW IN    192.0.2.0/24
+41641/udp (v6)             ALLOW IN    Anywhere (v6)
+1194/udp (v6)              ALLOW IN    Anywhere (v6)
+443/tcp (v6)               ALLOW IN    Anywhere (v6)
+
+Anywhere on lan-nic-0      ALLOW FWD   Anywhere on tailscale0
+Anywhere on lan-nic-1      ALLOW FWD   Anywhere on tailscale0
+Anywhere on tailscale0     ALLOW FWD   Anywhere on lan-nic-1
+Anywhere (v6) on lan-nic-0 ALLOW FWD   Anywhere (v6) on tailscale0
+Anywhere (v6) on lan-nic-1 ALLOW FWD   Anywhere (v6) on tailscale0
+Anywhere (v6) on tailscale0 ALLOW FWD  Anywhere (v6) on lan-nic-1
+
+
+# ------------------------------------------------------------------------------
+# 2. Hardened Cloud VM (Overlay-Restricted Admin & Diagnostic Ports)
+# ------------------------------------------------------------------------------
+[secadmin@cloud-edge-01:~$] sudo ufw status verbose
+Status: active
+Logging: on (low)
+Default: deny (incoming), allow (outgoing), deny (routed)
+New profiles: skip
+
+To                         Action      From
+--                         ------      ----
+41641/udp                  ALLOW IN    Anywhere
+3000 on tailscale0         ALLOW IN    Anywhere
+8022/tcp on tailscale0     ALLOW IN    Anywhere
+
+Anywhere                   ALLOW FWD   Anywhere on tailscale0
