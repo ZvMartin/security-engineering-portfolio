@@ -1,6 +1,5 @@
-### 2. `whitepapers/Zero-Trust Cloud Hardening and Post-Quantum SSH Implementation.md`
+### Zero-Trust Cloud Hardening and Post-Quantum SSH Implementation.md`
 
-```markdown
 # Zero-Trust Cloud Hardening and Post-Quantum SSH Implementation
 
 > **Author:** Zachary V. Martin, CC | **Date:** November 17, 2026 | **Environment:** Debian 12 ([VM_HOSTNAME]) on Google Cloud Platform (GCP), Tailscale Mesh Overlay, Windows 11 Administrative Workstation
