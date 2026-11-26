@@ -1,0 +1,88 @@
+# ==============================================================================
+# File: configs/homepage-services-sanitized.yml
+# Author: Zachary V. Martin, CC
+#
+# Sanitization Note: Tailscale node IDs, API tokens, local LAN IPv4 addresses,
+# and hostnames have been replaced with placeholders to preserve OPSEC.
+# ==============================================================================
+
+- Network:
+    - Tailscale Node:
+        icon: tailscale.png
+        widget:
+          type: tailscale
+          deviceid: <TAILSCALE_DEVICE_ID>
+          key: tskey-api-<API_TOKEN_REDACTED>
+    - Tailscale Monitor Local:
+        icon: si-python
+        href: http://10.10.0.14:8282
+        description: Web Terminal
+    - Tailscale Monitor Remote:
+        icon: si-python
+        href: http://linux-srv-01.<TAILNET_DOMAIN>:8282
+        description: Web Terminal
+    - SpeedTest (LAN):
+        icon: openspeedtest.png
+        href: http://10.10.0.14:3000
+        description: Local Direct Connect
+        container: openspeedtest
+    - SpeedTest (Tailscale):
+        icon: openspeedtest.png
+        href: http://linux-srv-01.<TAILNET_DOMAIN>:3000
+        description: Remote VPN Connect
+        container: openspeedtest
+
+- Media & Gaming:
+    - Jellyfin:
+        icon: jellyfin.png
+        href: http://10.10.0.14:8096
+        widget:
+          type: jellyfin
+          url: http://127.0.0.1:8096
+          key: <API_TOKEN_REDACTED>
+          version: 2
+          enableNowPlaying: true
+    - Minecraft Server:
+        icon: minecraft.png
+        description: Bedrock Edition
+        container: mc-bedrock
+
+- System Health:
+    - CPU Load:
+        icon: si-linux
+        widget:
+          type: glances
+          url: http://127.0.0.1:61208
+          version: 3
+          metric: cpu
+    - RAM Usage:
+        icon: si-ram
+        widget:
+          type: glances
+          url: http://127.0.0.1:61208
+          version: 3
+          metric: memory
+    - Btop Local:
+        icon: si-linux
+        href: http://10.10.0.14:8283
+        description: Live Stats TUI
+    - Htop Local:
+        icon: si-htop
+        href: http://10.10.0.14:8284
+        description: Process Management
+    - Btop Remote:
+        icon: si-linux
+        href: http://linux-srv-01.<TAILNET_DOMAIN>:8283
+        description: Live Stats TUI
+    - Htop Remote:
+        icon: si-htop
+        href: http://linux-srv-01.<TAILNET_DOMAIN>:8284
+        description: Process Management
+    - Glances Local:
+        icon: glances.png
+        href: http://10.10.0.14:61208
+        description: Local Network Access
+    - Glances Remote:
+        icon: glances.png
+        href: http://linux-srv-01.<TAILNET_DOMAIN>:61208
+        description: Tailscale/Remote Access
