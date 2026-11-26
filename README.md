@@ -40,6 +40,12 @@ This repository houses sanitized technical architecture whitepapers, threat inte
 
 ---
 
+## Custom Tooling & Projects
+
+- **[TS-MON v2 (`tailscale-network-monitor`)](https://github.com/ZvMartin/tailscale-network-monitor)** — Real-time Python CLI/TUI tailnet monitor tracking node reachability, latency, DERP vs. direct traffic via `/metrics`, and state transitions, embedded into a `ttyd` + Homepage monitoring stack.
+
+---
+
 ## Core Technical Competencies
 - **SIEM, Logs, EDR & Forensics:** Wazuh SIEM/XDR, Aurora Lite EDR (Sigma Rules), Linux (`auth.log`, `syslog`/journald) & Windows Event Log Analysis, SQL Querying & Log Correlation, Wireshark, `tshark`, `tcpdump`, Managed Switch Port Mirroring (SPAN)
 - **Network & Zero-Trust Engineering:** Tailscale (Declarative ACLs, Grants, Tags, Subnet Routers, Exit Nodes), WireGuard, OpenWrt, 10GbE Switching, VLANs/Subnets, UFW, GCP VPC Firewalls
