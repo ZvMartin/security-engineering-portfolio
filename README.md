@@ -47,10 +47,9 @@ This repository houses sanitized technical architecture whitepapers, threat inte
 ---
 
 ## Core Technical Competencies
-- **SIEM, Logs, EDR & Forensics:** Wazuh SIEM/XDR, Aurora Lite EDR (Sigma Rules), Linux (`auth.log`, `syslog`/journald) & Windows Event Log Analysis, SQL Querying & Log Correlation, Wireshark, `tshark`, `tcpdump`, Managed Switch Port Mirroring (SPAN)
+- **SIEM, Logs, EDR & Forensics:** Wazuh SIEM/XDR, Aurora Lite EDR (Sigma Rules), Linux (`auth.log`, `syslog`/`journald`) & Windows Event Log Analysis, SQL Querying & Log Correlation, Wireshark, `tshark`, `tcpdump`, Managed Switch Port Mirroring (SPAN)
 - **Network & Zero-Trust Engineering:** Tailscale (Declarative ACLs, Grants, Tags, Subnet Routers, Exit Nodes), WireGuard, OpenWrt, 10GbE Switching, VLANs/Subnets, UFW, GCP VPC Firewalls
-- **Systems & Automation:** Linux (Debian/Ubuntu) & Windows Administration, OpenSSH Post-Quantum Hardening (`mlkem768x25519-sha256` & `sntrup761x25519-sha512`), Docker & Docker Compose, Python Scripting, `ttyd` Ephemeral Terminals, `ffmpeg` Media Transcoding Automation
-
+- **Systems & Automation:** Linux (Debian/Ubuntu) & Windows Administration, OpenSSH Post-Quantum Hardening (`mlkem768x25519-sha256` & `sntrup761x25519-sha512`), Secure File Transfer & Sync (SFTP, SCP, WinSCP, Total Commander, Robocopy), Docker & Docker Compose, Python Scripting, `ttyd` Ephemeral Terminals, `ffmpeg` Media Transcoding Automation
 ---
 
 ## Certifications & Technical Training
