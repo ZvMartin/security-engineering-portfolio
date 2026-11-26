@@ -42,7 +42,7 @@ This repository houses sanitized technical architecture whitepapers, threat inte
 
 ## Custom Tooling & Projects
 
-- **[TS-MON v2 (`tailscale-network-monitor`)](https://github.com/ZvMartin/tailscale-network-monitor)** — Real-time Python CLI/TUI tailnet monitor tracking node reachability, latency, DERP vs. direct traffic via `/metrics`, and state transitions, embedded into a `ttyd` + Homepage monitoring stack.
+- **[TS-MON v3 (`tailscale-network-monitor`)](https://github.com/ZvMartin/tailscale-network-monitor)** — Real-time Python CLI/TUI tailnet monitor tracking node reachability, latency, DERP vs. direct traffic via `/metrics`, and state transitions, embedded into a `ttyd` + Homepage monitoring stack.
 
 ---
 
