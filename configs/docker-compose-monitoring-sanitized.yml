@@ -1,0 +1,33 @@
+# ==============================================================================
+# File: configs/docker-compose-monitoring-sanitized.yml
+# Author: Zachary V. Martin, CC
+#
+# Sanitization Note: Local hostnames, LAN IPv4 addresses, and API credentials
+# have been replaced with documentation placeholders to preserve OPSEC.
+# ==============================================================================
+
+services:
+  homepage:
+    image: ghcr.io/gethomepage/homepage:latest
+    container_name: homepage
+    network_mode: host
+    privileged: true
+    volumes:
+      - ./config:/app/config
+      - /var/run/docker.sock:/var/run/docker.sock:ro
+    environment:
+      - PORT=3005
+      - HOMEPAGE_ALLOWED_HOSTS=*
+    restart: unless-stopped
+
+  glances:
+    image: nicolargo/glances:3.4.0.3
+    container_name: glances
+    pid: host
+    network_mode: host
+    privileged: true
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock:ro
+    environment:
+      - "GLANCES_OPT=-w"
+    restart: unless-stopped
